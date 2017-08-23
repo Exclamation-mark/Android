@@ -91,7 +91,7 @@ public class HealthCircleFragment extends BaseFragment {
     private RecyclerView.LayoutManager mLayoutManager;
     Context mContext;
     UserInfo userInfo;
-
+    private String git;
     @Override
     public int getContentViewId() {
         return R.layout.fragment_blank;
