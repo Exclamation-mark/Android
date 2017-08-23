@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">控糖专家</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">控糖专家</string>
+    <!--MainActivity-->
+    <string name="bottom_tab_one">消息</string>
+    <string name="bottom_tab_two">健康圈</string>
+    <string name="bottom_tab_three">健康档案</string>
+    <string name="bottom_tab_four">我的</string>
+    <string name="contact_no_result">没有搜索到相应结果</string>
+    <string name="contact_edit_hint">请输入关键字</string>
+
+</resources>

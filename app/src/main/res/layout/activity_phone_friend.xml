@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.xiaocool.sugarangel.acyivity.PhoneFriendActivity">
+    <include layout="@layout/common_app_bar"/>
+    <com.xiaocool.sugarangel.view.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_half_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/search_bar_edit_selector"
+        android:drawableLeft="@drawable/search_bar_icon_normal_"
+        android:drawableStart="@drawable/search_bar_icon_normal_"
+        android:hint="@string/contact_edit_hint"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textSize="@dimen/contact_edit_font_size" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resolver_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/noResult"
+            style="@style/ContactItemHeader"
+            android:text="@string/contact_no_result"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/anno"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/contact_anno_bg"
+            android:gravity="center"
+            android:alpha="0.5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/contact_anno_font"
+            />
+
+        <com.xiaocool.sugarangel.view.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center" />
+    </FrameLayout>
+</LinearLayout>

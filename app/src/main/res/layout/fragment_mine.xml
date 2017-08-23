@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/driver"
+    android:orientation="vertical"
+    tools:context="com.xiaocool.sugarangel.fragment.MineFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/wodebeijing">
+
+        <com.xiaocool.sugarangel.view.CircleImageView
+            android:id="@+id/mine_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/touxiang"
+            app:border_color="@color/white"
+            app:border_width="2dp" />
+
+        <TextView
+            android:id="@+id/mine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/mine_avatar"
+            android:layout_toRightOf="@id/mine_avatar"
+            android:text="糖友"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/mine_use_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mine_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/mine_avatar"
+            android:text="使用天数20天"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!--<android.support.v7.widget.CardView-->
+
+    <!--android:id="@+id/fg_layout_user_info"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="20dp"-->
+    <!--app:cardBackgroundColor="@color/white"-->
+    <!--app:cardPreventCornerOverlap="true"-->
+    <!--app:cardUseCompatPadding="true"-->
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--app:cardElevation="5dp"-->
+    <!--&gt;-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/da"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.xiaocool.sugarangel.view.MyNavigationView
+                android:id="@+id/mine_account_nv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:icon_src="@drawable/wodezhanghu"
+                app:title_color="@android:color/black"
+                app:title_text="我的账户" />
+
+            <include layout="@layout/dash_line" />
+
+            <com.xiaocool.sugarangel.view.MyNavigationView
+                android:id="@+id/mine_patient_management"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:icon_src="@drawable/huanzheguanli"
+                app:title_color="@android:color/black"
+                app:title_text="患者管理" />
+
+            <include layout="@layout/dash_line" />
+
+            <com.xiaocool.sugarangel.view.MyNavigationView
+                android:id="@+id/mine_drug_management"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:icon_src="@drawable/yaopinguanli"
+                app:title_color="@android:color/black"
+                app:title_text="药品管理" />
+        </LinearLayout>
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--app:cardBackgroundColor="@color/white"-->
+        <!--app:cardPreventCornerOverlap="true"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--app:cardElevation="5dp"-->
+        <!--android:foreground="?android:attr/selectableItemBackground">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/zhong"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <com.xiaocool.sugarangel.view.MyNavigationView
+                android:id="@+id/mine_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                app:icon_src="@drawable/shezhi"
+                app:title_color="@android:color/black"
+                app:title_text="设置" />
+
+            <include layout="@layout/dash_line" />
+
+            <com.xiaocool.sugarangel.view.MyNavigationView
+                android:id="@+id/mine_help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                app:icon_src="@drawable/bangzhuzhongxin"
+                app:title_color="@android:color/black"
+                app:title_text="帮助中心" />
+
+        </LinearLayout>
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--app:cardBackgroundColor="@color/white"-->
+        <!--app:cardPreventCornerOverlap="true"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--app:cardElevation="5dp"-->
+
+        <!--android:foreground="?android:attr/selectableItemBackground">-->
+        <com.xiaocool.sugarangel.view.MyNavigationView
+            android:id="@+id/mine_invite"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/xiao"
+            android:padding="5dp"
+            app:icon_src="@drawable/yaoqing"
+            app:title_color="@android:color/black"
+            app:title_text="邀请" />
+        <!--</android.support.v7.widget.CardView>-->
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

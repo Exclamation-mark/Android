@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/driver"
+    tools:context="com.xiaocool.sugarangel.acyivity.HelpActivity">
+    <include layout="@layout/common_app_bar" />
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/self_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:title_text="自助问题">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/contact_customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:title_text="联系在线客服">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+</LinearLayout>

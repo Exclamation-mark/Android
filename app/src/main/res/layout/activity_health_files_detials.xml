@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaocool.sugarangel.acyivity.HealthFilesDetialsActivity">
+    <include layout="@layout/common_app_bar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基本信息"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:background="@color/driver"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="昵称"
+        app:hide_text="昵称">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="患病时间"
+        app:hide_text="患病时间">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="早晨空腹血糖"
+        app:hide_text="早晨空腹血糖">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="身高"
+        app:hide_text="身高">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="体重"
+        app:hide_text="体重">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="用药情况"
+        app:hide_text="患病时间">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="病情信息"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/black"
+        android:background="@color/driver"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="糖尿病类型"
+        app:hide_text="糖尿病类型">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="并发症"
+        app:hide_text="并发症">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="当前症状"
+        app:hide_text="当前症状">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="服用药物"
+        app:hide_text="服用药物">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="化验单"
+        app:hide_text="化验单">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="门诊病历"
+        app:hide_text="门诊病历">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

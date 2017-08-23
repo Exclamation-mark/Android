@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <declare-styleable name="navigation_combination">
+        <attr name="title_text" format="string" />
+        <attr name="hide_text" format="string" />
+        <attr name="icon_src" format="reference" />
+        <attr name="show_arrow" format="boolean" />
+        <attr name="arrow_src" format="integer" />
+        <attr name="title_color" format="integer" />
+    </declare-styleable>
+    <!--通讯录页面-->
+    <!--列表头-->
+    <style name="ContactItemHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/contact_item_header_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/whiteE</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:textColor">@color/black4</item>
+        <item name="android:textSize">@dimen/contact_item_header_font</item>
+    </style>
+    <style name="DialogBaseTheme" parent="android:Theme.Holo.Light.Dialog.NoActionBar">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="DialogBottomTheme" parent="DialogBaseTheme">
+        <item name="android:windowAnimationStyle">@style/WindowAnimBottomToTop</item>
+    </style>
+    <style name="WindowAnimBottomToTop" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="main_tab">
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/selector_home_tab_color</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+    </style>
+
+</resources>

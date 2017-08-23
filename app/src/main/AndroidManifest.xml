@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaocool.sugarangel">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".SugarangelAPP"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".acyivity.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <service
+            android:name="com.sinocare.bluetoothle.SN_BluetoothLeService"
+            android:enabled="true">
+            <meta-data
+                android:name="AccessKey"
+                android:value="akbfce673bdbc6496d811646cdbbc2077d" />
+            <meta-data
+                android:name="SecretKey"
+                android:value="YrI8SLO8YKK90Sxo5WsIwgjQ3VQEEYFTDGidR48SP0mK2hkcLK" />
+        </service>
+
+        <activity android:name=".acyivity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".acyivity.RegisterActivity" />
+        <activity android:name=".acyivity.ForgetPasswordActivity" />
+        <activity android:name=".acyivity.DataActivity" />
+        <activity android:name=".acyivity.BindDeviceActivity" />
+        <activity android:name=".acyivity.HealthFilesDetialsActivity" />
+        <activity android:name=".acyivity.MyAccountActivity" />
+        <activity android:name=".acyivity.PatientManagementActivity" />
+        <activity android:name=".acyivity.DrugManagementActivity" />
+        <activity android:name=".acyivity.SettingActivity" />
+        <activity android:name=".acyivity.HelpActivity" />
+        <activity android:name=".acyivity.MyInfoActivity" />
+        <activity android:name=".acyivity.CommonEditInfoActivity" />
+        <activity android:name=".acyivity.GenderSelectActivity" />
+        <activity android:name=".acyivity.ChatActivity" />
+        <activity
+            android:name=".acyivity.PhoneFriendActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".acyivity.InviteActivity" />
+        <activity android:name=".acyivity.SelfhelpActivity" />
+        <activity android:name=".acyivity.GroupChatActivity" />
+        <activity android:name=".acyivity.NearlyActivity" />
+        <activity
+            android:name=".acyivity.PhoneFriendTestActivity"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".acyivity.HomeActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="com.xiaocool.mayi.activity.WelcomeGuideActivity"></activity>
+    </application>
+
+</manifest>

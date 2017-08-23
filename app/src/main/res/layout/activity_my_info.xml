@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/driver"
+    tools:context="com.xiaocool.sugarangel.acyivity.MyInfoActivity">
+    <include layout="@layout/common_app_bar"/>
+    <RelativeLayout
+        android:id="@+id/avatar_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="头像"
+            android:textColor="@color/title_black"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right_gray" />
+
+        <com.xiaocool.sugarangel.view.CircleImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/arrow"
+            android:src="@drawable/touxiang" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/line" />
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/myinfo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hide_text="一卷大葱"
+        app:title_text="名字">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/myinfo_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hide_text="1234567"
+        app:title_text="控糖ID号">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/myinfo_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hide_text="烟台市芝罘区祥尧街92"
+        app:title_text="我的地址">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/myinfo_gender"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hide_text="男"
+        app:title_text="性别">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+    <include layout="@layout/line"/>
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:id="@+id/myinfo_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hide_text="山东烟台"
+        app:title_text="地区">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+</LinearLayout>

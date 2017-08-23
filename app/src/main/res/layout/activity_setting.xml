@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/driver"
+    android:orientation="vertical"
+    tools:context="com.xiaocool.sugarangel.acyivity.SettingActivity">
+
+    <include layout="@layout/common_app_bar" />
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="系统通知">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+
+    <include layout="@layout/line" />
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="清理缓存">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+
+    <include layout="@layout/line" />
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text="清空聊天记录">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:title_text="给我评分">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+
+    <com.xiaocool.sugarangel.view.MyNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:title_text="关于控糖专家">
+
+    </com.xiaocool.sugarangel.view.MyNavigationView>
+
+    <include layout="@layout/line" />
+</LinearLayout>
