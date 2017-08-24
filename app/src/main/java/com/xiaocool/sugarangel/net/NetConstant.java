@@ -79,6 +79,14 @@ public interface NetConstant extends BaseConstant {
      * 获取积分
      */
     String GetFriendList = NET_HOST + "a=GetFriendList";
+    /*
+    * 获取好友控糖笔记
+    * */
+    String GetDeviceDataListByUserid = NET_HOST + "a=get_device_data_list_by_userid";
+    /*
+  * 获取好友信息
+  * */
+    String GetUserInfo = NET_HOST + "a=getUserinfo";
     /**
      * 显示图片统一接口
      * http://yanglao.xiaocool.net/data/images/photo/文件名.jpg

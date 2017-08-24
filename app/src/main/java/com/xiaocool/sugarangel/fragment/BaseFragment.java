@@ -23,7 +23,7 @@ import butterknife.Unbinder;
 
 public abstract class BaseFragment extends Fragment {
     private Unbinder unbinder;
-    private TextView titleTv;
+    private TextView titleTv,custom_text_btn;
     private View appBar;
     private ImageView customBtn, backBtn;
     private View view;
@@ -54,6 +54,16 @@ public abstract class BaseFragment extends Fragment {
         titleTv.setText(title);
         backBtn = (ImageView) appBar.findViewById(R.id.back);
         backBtn.setVisibility(View.GONE);
+    }
+    public void setTitleBar(String title,String customTitle,View.OnClickListener onClickListener) {
+        appBar = view.findViewById(R.id.common_app_bar);
+        titleTv = (TextView) appBar.findViewById(R.id.title);
+        titleTv.setText(title);
+        backBtn = (ImageView) appBar.findViewById(R.id.back);
+        backBtn.setVisibility(View.GONE);
+        custom_text_btn = (TextView)appBar.findViewById(R.id.custom_text_btn);
+        custom_text_btn.setText(customTitle);
+        custom_text_btn.setOnClickListener(onClickListener);
     }
 
 

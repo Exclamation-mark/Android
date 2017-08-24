@@ -44,8 +44,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.Holder> {
     @Override
     public void onBindViewHolder(final Holder holder, int position) {
         HistoryDataBean item = list.get(position);
-        long date = Long.parseLong(item.getDatatime())*1000;
-        holder.dataTime.setText(DateUtils.unixTimestampToDate(date));
+        long date = Long.parseLong(item.getDatatime());
+        holder.dataTime.setText(DateUtils.getStrTime(date+"","yyyy-MM-dd HH:mm:ss"));
         holder.bloodSugar.setText(item.getBloodsugar() + "mmol/L");
 
         if (item.getSampletype().equals(" 0")) {

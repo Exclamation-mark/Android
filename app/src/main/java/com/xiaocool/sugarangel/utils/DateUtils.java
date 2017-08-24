@@ -20,6 +20,17 @@ public class DateUtils {
     public static final String DATE_SMALL_STR = "yyyy-MM-dd";
     public static final String DATE_KEY_STR = "yyMMddHHmmss";
 
+    // 将时间戳转为字符串
+    public static String getStrTime(String cc_time,String type) {
+        String re_StrTime = null;
+        SimpleDateFormat sdf = new SimpleDateFormat(type);
+//        // 例如：
+//        cc_time="1291778220" ;
+        long lcc_time = Long.valueOf(cc_time);
+        re_StrTime = sdf.format(new Date(lcc_time * 1000L));
+        return re_StrTime;
+    }
+
     /**
      * 使用预设格式提取字符串日期
      *
@@ -163,30 +174,10 @@ public class DateUtils {
     }
 
 
-    /**
-     * 将Unix时间戳转换成日期
-     *
-     * @param long timestamp 时间戳
-     * @return String 日期字符串
-     */
-    public static String unixTimestampToDate(long timestamp) {
-        SimpleDateFormat sd = new SimpleDateFormat(DATE_FULL_STR);
-        sd.setTimeZone(TimeZone.getTimeZone("GMT+8"));
-        return sd.format(new Date(timestamp));
-    }
-
-    /*时间戳转换成字符窜*/
-    public static String getDateToString(long time) {
-        SimpleDateFormat sf = null;
-        Date d = new Date(time);
-//        sf = new SimpleDateFormat("yyyy年MM月dd日hh时mm分ss秒");
-        sf = new SimpleDateFormat("yyyy年MM月dd日");
-        return sf.format(d);
-    }
     /*Date转换成字符窜*/
     public static String DateToString(Date time) {
-        SimpleDateFormat sdf=new SimpleDateFormat(DATE_FULL_STR);
-        java.util.Date date=new java.util.Date();
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FULL_STR);
+        java.util.Date date = new java.util.Date();
         return sdf.format(date);
     }
 

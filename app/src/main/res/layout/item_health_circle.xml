@@ -4,7 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:layout_margin="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="10dp"
     android:background="@drawable/jiankangquanb"
     android:orientation="vertical">
 
@@ -15,9 +18,11 @@
         android:padding="10dp">
 
         <ImageView
+            android:id="@+id/circle_av"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@color/deep_green" />
+            android:background="@drawable/img_bg_rectangle"
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/circle_name"
@@ -28,15 +33,16 @@
             android:text="一帘幽梦"
             android:textColor="@color/black" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginLeft="5dp"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="年龄：40岁"
-            android:textColor="@color/black" />
+        <!--<TextView-->
+            <!--android:id="@+id/circle_age"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical|right"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right"-->
+            <!--android:text="年龄：40岁"-->
+            <!--android:textColor="@color/black" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -56,13 +62,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="绑定患者：" />
+                android:text="年龄：" />
 
             <TextView
+                android:id="@+id/circle_age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="父亲" />
+                android:text="40岁" />
         </LinearLayout>
 
         <LinearLayout
@@ -78,6 +85,7 @@
                 android:text="治疗天数：" />
 
             <TextView
+                android:id="@+id/circle_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -104,6 +112,7 @@
                 android:text="血糖值：" />
 
             <TextView
+                android:id="@+id/circle_sugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -123,6 +132,7 @@
                 android:text="病种：" />
 
             <TextView
+                android:id="@+id/circle_diseases"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

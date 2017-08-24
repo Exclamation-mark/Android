@@ -69,7 +69,10 @@
         <activity
             android:name=".acyivity.HomeActivity"
             android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name="com.xiaocool.mayi.activity.WelcomeGuideActivity"></activity>
+        <activity android:name="com.xiaocool.mayi.activity.WelcomeGuideActivity" />
+        <activity android:name=".acyivity.CircleFriendDetialActivity" />
+        <activity android:name=".acyivity.FriendNoteActivity" />
+        <activity android:name=".acyivity.SearchFriendActivity"></activity>
     </application>
 
 </manifest>

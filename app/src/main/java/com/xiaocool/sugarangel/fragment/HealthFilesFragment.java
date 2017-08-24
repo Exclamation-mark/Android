@@ -16,6 +16,7 @@ import com.xiaocool.sugarangel.R;
 import com.xiaocool.sugarangel.acyivity.DataActivity;
 import com.xiaocool.sugarangel.adapter.DataAdapter;
 import com.xiaocool.sugarangel.adapter.HealthFilesAdapter;
+import com.xiaocool.sugarangel.bean.FriendListBean;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,6 +33,7 @@ public class HealthFilesFragment extends BaseFragment {
     Unbinder unbinder;
     Context mContext;
     HealthFilesAdapter healthFilesAdapter;
+
     @Override
     public int getContentViewId() {
         return R.layout.fragment_health_files;

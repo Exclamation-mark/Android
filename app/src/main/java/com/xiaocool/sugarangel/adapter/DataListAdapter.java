@@ -60,7 +60,7 @@ public class DataListAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         long date = Long.parseLong(item.getDatatime())*1000;
-        holder.dataTime.setText(DateUtils.unixTimestampToDate(date));
+        holder.dataTime.setText(DateUtils.getStrTime(date+"","yyyy-MM-dd HH:mm:ss"));
         holder.bloodSugar.setText(item.getBloodsugar() + "mmol/L");
 
         if (item.getSampletype().equals(" 0")) {

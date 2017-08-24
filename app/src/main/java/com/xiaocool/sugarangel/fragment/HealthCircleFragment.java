@@ -26,6 +26,7 @@ import com.xiaocool.sugarangel.acyivity.GroupChatActivity;
 import com.xiaocool.sugarangel.acyivity.NearlyActivity;
 import com.xiaocool.sugarangel.acyivity.PhoneFriendActivity;
 import com.xiaocool.sugarangel.acyivity.PhoneFriendTestActivity;
+import com.xiaocool.sugarangel.acyivity.SearchFriendActivity;
 import com.xiaocool.sugarangel.adapter.ContactRecyclerAdapter;
 import com.xiaocool.sugarangel.adapter.OnRecyclerViewListener;
 import com.xiaocool.sugarangel.bean.FriendListBean;
@@ -91,7 +92,7 @@ public class HealthCircleFragment extends BaseFragment {
     private RecyclerView.LayoutManager mLayoutManager;
     Context mContext;
     UserInfo userInfo;
-    private String git;
+
     @Override
     public int getContentViewId() {
         return R.layout.fragment_blank;
@@ -99,7 +100,12 @@ public class HealthCircleFragment extends BaseFragment {
 
     @Override
     public void initView() {
-        setTitleBar("健康圈");
+        setTitleBar("健康圈", "添加病友", new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(mContext, SearchFriendActivity.class));
+            }
+        });
         exampleList = new ArrayList<>();
         tempExampleList = new ArrayList<>();
         mContext = getActivity();
@@ -178,7 +184,7 @@ public class HealthCircleFragment extends BaseFragment {
                 String[] namestr = tempInfoBean.getName().split(" ");
                 int strLength = pinyinstr.length;
                 for (int j = 0; j < strLength; j++) {
-                    if (pinyinstr[j].startsWith(s)||namestr[j].startsWith(s)) {
+                    if (pinyinstr[j].startsWith(s) || namestr[j].startsWith(s)) {
                         tempExampleList.add(tempInfoBean);
                     }
                 }
@@ -307,6 +313,7 @@ public class HealthCircleFragment extends BaseFragment {
                 break;
         }
     }
+
     //获取好友列表并排序
     private void getData() {
         showProgressDialog(true);

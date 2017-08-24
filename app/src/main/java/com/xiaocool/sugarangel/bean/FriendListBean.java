@@ -2,11 +2,13 @@ package com.xiaocool.sugarangel.bean;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
+
 /**
  * Created by Administrator on 2017/8/3 0003.
  */
 
-public class FriendListBean implements Comparable<FriendListBean> {
+public class FriendListBean implements Comparable<FriendListBean>, Serializable {
 
     /**
      * id : 1
