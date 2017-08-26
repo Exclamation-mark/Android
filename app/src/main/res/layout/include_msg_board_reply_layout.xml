@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#eee"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/et_leave_msg_board_input"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+                <EditText
+                    android:id="@+id/et_face_text_emotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#0000"
+                    android:maxLines="3"
+                    android:minHeight="36dp"
+                    android:textSize="16sp" />
+
+
+
+
+            </FrameLayout>
+
+
+            <Button
+                android:id="@+id/btn_send_msg"
+                android:layout_width="56dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/btn_leave_msg_board_send"
+                android:enabled="false"
+                android:text="发送"
+                android:textColor="#eee"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/emotion"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:minWidth="70dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/iv_trigger_emotion_keyboard"
+                android:clickable="true"
+                android:text="表情" />
+            <TextView
+                android:minWidth="70dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/voice"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/iv_trigger_emotion_keyboard"
+                android:clickable="true"
+                android:text="语音" />
+            <TextView
+                android:minWidth="70dp"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/picture"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/iv_trigger_emotion_keyboard"
+                android:clickable="true"
+                android:text="图片" />
+        </LinearLayout>
+
+        QRecordAudioView
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="表情页面"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/selectEmotionView"/>
+
+    <com.example.mylibrary.RecordAudioView.QRecordAudioView
+        android:visibility="gone"
+        android:id="@+id/recordVoiceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.mylibrary.photoListView.QPhotoView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:maxSeleteCount="20"
+        android:id="@+id/selectPictureView"/>
+
+
+
+</LinearLayout>
