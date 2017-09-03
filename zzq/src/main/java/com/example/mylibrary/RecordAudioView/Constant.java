@@ -17,4 +17,5 @@ public interface Constant {
     int changeDeleteViewBkToGray =8;
     int changePlayViewBkToCommon = 9;
     int changeDeleteViewBkToCommon = 10;
+    int end = 11;
 }

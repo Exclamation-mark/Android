@@ -28,6 +28,7 @@ import static com.example.mylibrary.RecordAudioView.Constant.changeDeleteViewBkT
 import static com.example.mylibrary.RecordAudioView.Constant.changePlayView;
 import static com.example.mylibrary.RecordAudioView.Constant.changePlayViewBkToCommon;
 import static com.example.mylibrary.RecordAudioView.Constant.changePlayViewBkToGray;
+import static com.example.mylibrary.RecordAudioView.Constant.end;
 import static com.example.mylibrary.RecordAudioView.Constant.recoveryDeleteViewSeze;
 import static com.example.mylibrary.RecordAudioView.Constant.recoveryPlayViewSeze;
 
@@ -135,10 +136,10 @@ public class QRecordAudioView extends RelativeLayout {
                         recordTimeTextView.stopefreshAnimation();
                         handler.sendEmptyMessage(recoveryDeleteViewSeze);
                         handler.sendEmptyMessage(recoveryPlayViewSeze);
-                        play.setBackgroundResource(R.drawable.touming);
-                        delete.setBackgroundResource(R.drawable.touming);
-                        centerText.setText("按住说话");
                         hideViewOnFinishTounch();
+                        handler.sendEmptyMessage(end);
+
+
                         if (aListener != null){
                             if (isInDeleteView(v,event)){
                                 aListener.OnDeleteRecordSeleted();
@@ -242,6 +243,11 @@ public class QRecordAudioView extends RelativeLayout {
                 case changeDeleteViewBkToCommon:
                     showCenterTimingView();
                     delete.setBackgroundResource(R.drawable.touming);
+                    break;
+                case end:
+                    delete.setBackgroundResource(R.drawable.touming);
+                    play.setBackgroundResource(R.drawable.touming);
+                    centerText.setText("按住说话");
                     break;
             }
         }
